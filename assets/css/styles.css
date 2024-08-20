@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Sedan:ital@0;1&display=swap');
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Sedan", sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    font-size: 1em;
+}
+
+.receta-container {
+    background-color: #fff;
+    padding: 1.5em;
+    border-radius: 1em;
+    box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.1);
+    max-width: 30em;
+    width: 100%;
+    margin-top: 0.5em;
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    -ms-border-radius: 1em;
+    -o-border-radius: 1em;
+}
+
+.receta-container h1 {
+    font-size: 1.8em;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.image-section {
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 1em;
+    margin-bottom: 1em;
+}
+
+.receta-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1em;
+}
+
+.title-section {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.time-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5em;
+    text-align: center;
+}
+
+.time-section div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.time-section h3 {
+    margin: 0;
+    font-size: 1em;
+    color: #777;
+}
+
+.time-section p {
+    margin: 0;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.ingredients-section ol,
+.instructions-section ol {
+    padding-left: 0;
+    margin-bottom: 0.5em;
+    list-style: none;
+
+}
+
+.ingredients-section li,
+.instructions-section li {
+    margin-bottom: 1.8em; /* Espacio entre los elementos de la lista */
+}
+
+.note {
+    font-size: 0.9em;
+    font-style: normal;
+    color: #777; /* Color gris claro */
+}
+
+.nutrition-section {
+    margin-top: 1.5em;
+}
+
+.nutrition-facts {
+    list-style: none;
+    padding: 0;
+}
+
+.nutrition-facts li {
+    margin-bottom: 1.8em;
+    font-size: 0.9em;
+}
+
+/* mq responsive*/
+@media (max-width: 768px) {
+    .receta-container {
+        max-width: 90%;
+        padding: 1em;
+    }
+
+    .time-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .time-section div {
+        margin-bottom: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .receta-container {
+        max-width: 95%;
+        padding: 0.5em;
+    }
+
+    .title-section h2 {
+        font-size: 1.5em;
+    }
+
+    .time-section h3{
+        font-size: 1em;
+    }
+
+    .time-section p {
+        font-size: 0.8em;
+    }
+
+    .ingredients-section ol,
+    .instructions-section ol {
+        padding-left: 0;
+        font-size: 0.9em;
+    }
+
+    .nutrition-facts li {
+        font-size: 0.85em;
+    }
+}
